@@ -19,4 +19,7 @@ class Character < ApplicationRecord
 
     return the_one
   end
+
+  belongs_to :actor
+  belongs_to :movie
 end

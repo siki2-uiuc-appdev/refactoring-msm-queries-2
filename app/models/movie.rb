@@ -21,5 +21,10 @@ class Movie < ApplicationRecord
     the_one = matching_set.at(0)
 
     return the_one
+
   end
+
+  belongs_to :director
+  has_many :characters
+  has_many(:cast, {:through => :characters, :source => :actor})
 end
